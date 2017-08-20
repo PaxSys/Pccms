@@ -1,0 +1,71 @@
+﻿@model PaxSys.Pccms.ContestAdministration.Models.Detailed.DetailedContestViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <style>
+        .right-strip {
+            border-right-style: solid;
+            border-right-width: 1px; 
+        }
+         
+    </style>
+</head>
+
+<body>
+
+
+<div class="page-header"><h1>@Model.Description</h1></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 right-strip">
+                <h3>Attending Groups</h3>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>Locale</th>
+                            <th>Group Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Groups)
+                        {
+                            <tr>
+                                <td>@item.Name</td>
+                                <td>@item.Locale</td>
+                                <td>@item.GroupScore</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+
+            <div class="col-sm-6">
+                <h3>Contest Activities</h3>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Activities)
+                        {
+                            <tr>
+                                <td>@item.Name</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+

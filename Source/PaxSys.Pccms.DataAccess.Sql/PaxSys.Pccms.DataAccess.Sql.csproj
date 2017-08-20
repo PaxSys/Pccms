@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard1.4</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="1.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="1.1.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PaxSys.Pccms.Domain\PaxSys.Pccms.Domain.csproj">
+      <Project>{46526AB7-A80F-4DB3-9368-2E3F02056957}</Project>
+      <Name>PaxSys.Pccms.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PaxSys.Pcmms.Utils\PaxSys.Pcmms.Utils.csproj">
+      <Project>{5AE95465-6707-4897-9A0C-A7293E9F621A}</Project>
+      <Name>PaxSys.Pcmms.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

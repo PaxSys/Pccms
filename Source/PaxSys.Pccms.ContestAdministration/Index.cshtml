@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = null;
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+}
+
+<head>
+    <link href="~/Content/bootstrap-lumen.css" rel="stylesheet" />
+    <link href="~/Content/Main.css" rel="stylesheet" /> 
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron center-block" id="HomeJumbo" align="center">
+            <div class="well-lg" id="HomeWell">
+                <h2>Welcome To ParafiadaSoftware</h2>
+                <p>
+                    This piece of software is designed to lend a hand in making annual
+                    Parafiada olympics happen.
+                </p>
+                <div class="divider"></div>
+                <p>First of all you are required to Login, or Make an account by Registering</p>
+
+                <a href="@Url.Action("Index", "Contest")" class="btn btn-primary">
+                    Contests
+                    <span class="glyphicon glyphicon-list-alt"></span>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</body>

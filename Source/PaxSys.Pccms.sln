@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.0.0
+MinimumVisualStudioVersion = 10.0.0.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaxSys.Pccms.ContestAdministration", "PaxSys.Pccms.ContestAdministration\PaxSys.Pccms.ContestAdministration.csproj", "{2275637F-E851-4DFB-A38E-1E02F290CBBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaxSys.Pccms.Domain", "PaxSys.Pccms.Domain\PaxSys.Pccms.Domain.csproj", "{46526AB7-A80F-4DB3-9368-2E3F02056957}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaxSys.Pccms.DataAccess", "PaxSys.Pccms.DataAccess\PaxSys.Pccms.DataAccess.csproj", "{2923D6FE-1E2C-4495-BF94-569E55A487E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaxSys.Pccms.DataAccess.Sql", "PaxSys.Pccms.DataAccess.Sql\PaxSys.Pccms.DataAccess.Sql.csproj", "{FA6F989B-BF8F-4589-92A6-AE4734959C6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaxSys.Pcmms.Utils", "PaxSys.Pcmms.Utils\PaxSys.Pcmms.Utils.csproj", "{5AE95465-6707-4897-9A0C-A7293E9F621A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaxSys.Pccms.DataAccess.MySql", "PaxSys.Pccms.DataAccess.MySql\PaxSys.Pccms.DataAccess.MySql.csproj", "{5391B0A8-2BFF-49BC-AB25-AAB16E72475D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2275637F-E851-4DFB-A38E-1E02F290CBBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2275637F-E851-4DFB-A38E-1E02F290CBBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2275637F-E851-4DFB-A38E-1E02F290CBBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2275637F-E851-4DFB-A38E-1E02F290CBBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46526AB7-A80F-4DB3-9368-2E3F02056957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46526AB7-A80F-4DB3-9368-2E3F02056957}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46526AB7-A80F-4DB3-9368-2E3F02056957}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46526AB7-A80F-4DB3-9368-2E3F02056957}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2923D6FE-1E2C-4495-BF94-569E55A487E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2923D6FE-1E2C-4495-BF94-569E55A487E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2923D6FE-1E2C-4495-BF94-569E55A487E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2923D6FE-1E2C-4495-BF94-569E55A487E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA6F989B-BF8F-4589-92A6-AE4734959C6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA6F989B-BF8F-4589-92A6-AE4734959C6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA6F989B-BF8F-4589-92A6-AE4734959C6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA6F989B-BF8F-4589-92A6-AE4734959C6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AE95465-6707-4897-9A0C-A7293E9F621A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AE95465-6707-4897-9A0C-A7293E9F621A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AE95465-6707-4897-9A0C-A7293E9F621A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AE95465-6707-4897-9A0C-A7293E9F621A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5391B0A8-2BFF-49BC-AB25-AAB16E72475D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5391B0A8-2BFF-49BC-AB25-AAB16E72475D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5391B0A8-2BFF-49BC-AB25-AAB16E72475D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5391B0A8-2BFF-49BC-AB25-AAB16E72475D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
