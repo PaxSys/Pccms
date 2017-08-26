@@ -3,6 +3,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using PaxSys.Pccms.DataAccess.Json;
+using PaxSys.Pccms.DataAccess.Sql.Contexts;
+using PaxSys.Pccms.DataAccess.Sql.Repositories;
+using PaxSys.Pccms.Domain;
 
 namespace PaxSys.Pccms.ContestAdministration
 {
@@ -15,6 +19,7 @@ namespace PaxSys.Pccms.ContestAdministration
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
+                        
             Configuration = builder.Build();
         }
 
@@ -25,6 +30,17 @@ namespace PaxSys.Pccms.ContestAdministration
         {
             // Add framework services.
             services.AddMvc();
+            services.AddSingleton(Configuration);
+
+            if (Configuration["DatabaseType"] == "json".ToLower() && Configuration["JsonDatabaseDirectoryPath"] != null)
+            {
+                services.AddSingleton<IContestRepository, JsonContestRepository>(x => new JsonContestRepository(Configuration["JsonDatabaseDirectoryPath"]));
+            }
+            else
+            {
+                services.AddSingleton<ContestAdministrationContext>();
+                services.AddSingleton<IContestRepository, ContestRepository>();
+            }
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

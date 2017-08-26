@@ -1,24 +1,22 @@
 ﻿using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Storage.Internal;
 using PaxSys.Pccms.ContestAdministration.Mappings;
-using PaxSys.Pccms.DataAccess.Sql.Contexts;
-using PaxSys.Pccms.DataAccess.Sql.Repositories;
+using PaxSys.Pccms.Domain;
 
 namespace PaxSys.Pccms.ContestAdministration.Controllers
 {
     public class ContestController : Controller
     {
-        private readonly ContestRepository _repository;
-
-        public ContestController()
+        private readonly IContestRepository _contestRepository;
+        
+        public ContestController(IContestRepository contestRepository)
         {
-            _repository = new ContestRepository(DataAccess.Sql.Contexts.ContestAdministrationContext.Create());
+            _contestRepository = contestRepository;
         }
 
         public IActionResult Index()
         {
-            var contests = _repository.GetAll();
+            var contests = _contestRepository.Get();
             var contestsVm = contests.Select(BasicMapping.MapBasicContestViewModel).ToArray();
 
             return View(contestsVm);
@@ -26,7 +24,7 @@ namespace PaxSys.Pccms.ContestAdministration.Controllers
 
         public IActionResult Details(int id)
         {
-            var contest = _repository.GetDetailedContest(id);
+            var contest = _contestRepository.GetDetailedContest(id);
             var contestVm = DetailedMapping.MapDetailedContestViewModel(contest);
 
             return View(contestVm);

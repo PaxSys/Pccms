@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaxSys.Pccms.DataAccess.Sql
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaxSys.Pcmms.Utils", "PaxSys.Pcmms.Utils\PaxSys.Pcmms.Utils.csproj", "{5AE95465-6707-4897-9A0C-A7293E9F621A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaxSys.Pccms.DataAccess.MySql", "PaxSys.Pccms.DataAccess.MySql\PaxSys.Pccms.DataAccess.MySql.csproj", "{5391B0A8-2BFF-49BC-AB25-AAB16E72475D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaxSys.Pccms.DataAccess.Json", "PaxSys.Pccms.DataAccess.Json\PaxSys.Pccms.DataAccess.Json.csproj", "{39355D1C-10A5-49B4-BFEE-6BC325778214}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +41,10 @@ Global
 		{5AE95465-6707-4897-9A0C-A7293E9F621A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AE95465-6707-4897-9A0C-A7293E9F621A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AE95465-6707-4897-9A0C-A7293E9F621A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5391B0A8-2BFF-49BC-AB25-AAB16E72475D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5391B0A8-2BFF-49BC-AB25-AAB16E72475D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5391B0A8-2BFF-49BC-AB25-AAB16E72475D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5391B0A8-2BFF-49BC-AB25-AAB16E72475D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39355D1C-10A5-49B4-BFEE-6BC325778214}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39355D1C-10A5-49B4-BFEE-6BC325778214}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39355D1C-10A5-49B4-BFEE-6BC325778214}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39355D1C-10A5-49B4-BFEE-6BC325778214}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

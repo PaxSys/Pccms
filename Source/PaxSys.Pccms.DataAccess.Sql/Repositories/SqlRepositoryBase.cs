@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
+using PaxSys.Pccms.Domain;
+using PaxSys.Pccms.Domain.Models;
 using PaxSys.Pcmms.Utils;
 
 namespace PaxSys.Pccms.DataAccess.Sql.Repositories
 {
-    public class SqlRepositoryBase<TContext, TEntity>  
+    public class SqlRepositoryBase<TContext, TEntity> : IRepository<TEntity>
         where TContext : DbContext
-        where TEntity : class
+        where TEntity : Entity
     {
         protected TContext Context { get; }
 
@@ -27,16 +29,16 @@ namespace PaxSys.Pccms.DataAccess.Sql.Repositories
             return Context.Set<TEntity>().Find(id);
         }
 
-        public IEnumerable<TEntity> GetAll()
+        public TEntity[] Get()
         {
-            return Context.Set<TEntity>().ToList();
+            return Context.Set<TEntity>().ToArray();
         }
 
-        public IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate)
+        public TEntity[] Find(Expression<Func<TEntity, bool>> predicate)
         {
             Guard.ArgumentNotDefault(predicate, nameof(predicate));
             
-            return Context.Set<TEntity>().Where(predicate);
+            return Context.Set<TEntity>().Where(predicate).ToArray();
         }
 
         public TEntity FirstOrDefault(Expression<Func<TEntity, bool>> predicate)
@@ -46,7 +48,7 @@ namespace PaxSys.Pccms.DataAccess.Sql.Repositories
             return Context.Set<TEntity>().FirstOrDefault(predicate);
         }
 
-        public void Add(TEntity model)
+        public void Store(TEntity model)
         {
             Guard.ArgumentNotDefault(model, nameof(model));
             
@@ -54,7 +56,7 @@ namespace PaxSys.Pccms.DataAccess.Sql.Repositories
             Context.SaveChanges();
         }
 
-        public void AddRange(IEnumerable<TEntity> models)
+        public void AddRange(TEntity[] models)
         {
             Guard.ArgumentNotDefault(models, nameof(models));
             

@@ -10,6 +10,8 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="1.1.2" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PaxSys.Pccms.DataAccess.Json\PaxSys.Pccms.DataAccess.Json.csproj" />
+    <ProjectReference Include="..\PaxSys.Pccms.DataAccess.MySql\PaxSys.Pccms.DataAccess.MySql.csproj" />
     <ProjectReference Include="..\PaxSys.Pccms.DataAccess.Sql\PaxSys.Pccms.DataAccess.Sql.csproj" />
     <ProjectReference Include="..\PaxSys.Pccms.DataAccess\PaxSys.Pccms.DataAccess.csproj" />
     <ProjectReference Include="..\PaxSys.Pccms.Domain\PaxSys.Pccms.Domain.csproj" />

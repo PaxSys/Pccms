@@ -1,12 +1,13 @@
 ﻿using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using PaxSys.Pccms.DataAccess.Sql.Contexts;
+using PaxSys.Pccms.Domain;
 using PaxSys.Pccms.Domain.Models;
 using PaxSys.Pcmms.Utils;
 
 namespace PaxSys.Pccms.DataAccess.Sql.Repositories
 {
-    public class ContestRepository : SqlRepositoryBase<ContestAdministrationContext, Contest>
+    public class ContestRepository : SqlRepositoryBase<ContestAdministrationContext, Contest>, IContestRepository
     {
         public ContestRepository(ContestAdministrationContext context) : base(context)
         {
