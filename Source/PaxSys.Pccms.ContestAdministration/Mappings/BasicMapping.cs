@@ -1,24 +1,25 @@
-﻿using PaxSys.Pccms.ContestAdministration.Models.Basic;
+﻿using PaxSys.Pccms.ContestAdministration.Models;
+using PaxSys.Pccms.ContestAdministration.Models.Basic;
 using PaxSys.Pccms.Domain.Models;
 
 namespace PaxSys.Pccms.ContestAdministration.Mappings
 {
     public static class BasicMapping
     {
-        public static BasicContestViewModel MapBasicContestViewModel(Contest model)
+        public static ContestViewModel MapBasicContestViewModel(Contest model)
         {
-            return new BasicContestViewModel()
+            return new ContestViewModel
             {
                 Id = model.Id,
                 Description = model.Description,
-                ContestDate = model.ContestDate,
+                Date = model.ContestDate,
                 IsOver = model.IsOver,
             };
         }
 
         public static BasicGroupViewModel MapBasicGroupViewModel(Group model)
         {
-            return new BasicGroupViewModel()
+            return new BasicGroupViewModel
             {
                 Id = model.Id,
                 Name = model.Name,
@@ -30,7 +31,7 @@ namespace PaxSys.Pccms.ContestAdministration.Mappings
 
         public static BasicActivityViewModel MapBasicActivityViewModel(Activity model)
         {
-            return new BasicActivityViewModel()
+            return new BasicActivityViewModel
             {
                 Id = model.Id,
                 Name = model.Name

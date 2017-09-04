@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using PaxSys.Pccms.DataAccess.Json;
+using PaxSys.Pccms.DataAccess.LiteDb;
 using PaxSys.Pccms.DataAccess.Sql.Contexts;
 using PaxSys.Pccms.DataAccess.Sql.Repositories;
 using PaxSys.Pccms.Domain;
@@ -32,9 +32,9 @@ namespace PaxSys.Pccms.ContestAdministration
             services.AddMvc();
             services.AddSingleton(Configuration);
 
-            if (Configuration["DatabaseType"] == "json".ToLower() && Configuration["JsonDatabaseDirectoryPath"] != null)
+            if (Configuration["DatabaseType"] == "litedb".ToLower() && Configuration["LiteDbDatabaseDirectoryPath"] != null)
             {
-                services.AddSingleton<IContestRepository, JsonContestRepository>(x => new JsonContestRepository(Configuration["JsonDatabaseDirectoryPath"]));
+                services.AddSingleton<IContestRepository, LiteDbContestRepository>(x => new LiteDbContestRepository(Configuration["LiteDbDatabaseDirectoryPath"]));
             }
             else
             {
